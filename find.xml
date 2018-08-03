@@ -1,7 +1,7 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="File '...\a_Zadania\a_Dzien_1\a_Tworzenie_baz_i_tabel\Test.java [POZ_JEE_W_01_MySQL]'" />
-    <option name="defaultScopeName" value="File '...\a_Zadania\a_Dzien_1\a_Tworzenie_baz_i_tabel\Test.java [POZ_JEE_W_01_MySQL]'" />
-    <option name="SEARCH_SCOPE" value="File '...\a_Zadania\a_Dzien_1\a_Tworzenie_baz_i_tabel\Test.java [POZ_JEE_W_01_MySQL]'" />
+    <option name="customScope" value="All Places" />
+    <option name="defaultScopeName" value="All Places" />
+    <option name="SEARCH_SCOPE" value="All Places" />
   </component>
 </application>
