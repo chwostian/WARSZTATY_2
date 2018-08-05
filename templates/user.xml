@@ -1,0 +1,23 @@
+<templateSet group="user">
+  <template name="scanner" value="static public void main (String[] args){&#10;&#10;    Scanner scan = new Scanner(System.in);&#10;&#10;    System.out.println(&quot;Podaj liczbę całkowitą&quot;);&#10;    while (!scan.hasNextInt()) {&#10;        System.out.println(&quot;Podaj liczbę całkowitą&quot;);&#10;        scan.nextLine();&#10;    }&#10;&#10;    int a = scan.nextInt();&#10;&#10;    System.out.println(a);&#10;&#10;}" description="Użycie scanner do pobrania liczby całkowitej" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="saveToDb" value="public void saveToDB(Connection conn) throws SQLException {&#10;&#10;&#10;        String sql = &quot;INSERT INTO $tableName$($columnNamesSeparatedbyComma$) VALUES ($QuestionMarksAsParameters$)&quot;;&#10;        String generatedColumns[] = { &quot;ID&quot; };&#10;        PreparedStatement preparedStatement = conn.prepareStatement(sql, generatedColumns);&#10;        preparedStatement.setString(1, $this.?$);&#10;        preparedStatement.setString(2, $this.?$);&#10;        preparedStatement.setString(3, $this.?$);&#10;        preparedStatement.executeUpdate();&#10;        ResultSet rs = preparedStatement.getGeneratedKeys();&#10;        if (rs.next()) { this.id = rs.getInt(1);&#10;        System.out.println(&quot;Do bazy dopisano ??????&quot;);}&#10;&#10;        }" description="Zapis do bazy" toReformat="false" toShortenFQNames="true">
+    <variable name="tableName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="columnNamesSeparatedbyComma" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="QuestionMarksAsParameters" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="updateToDb" value="public void updateUserDB(Connection conn, $columnName$, int id) throws SQLException {&#10;&#10;        &#10;        String sql = &quot;UPDATE $tableName$ SET $columnNamesWithValues$ where id = ?&quot;;&#10;        PreparedStatement preparedStatement;&#10;        preparedStatement = conn.prepareStatement(sql);&#10;        preparedStatement.setString(1, $this.?$);&#10;        preparedStatement.setString(2, $this.?$);&#10;        preparedStatement.setInt(3,  id);&#10;        preparedStatement.executeUpdate();&#10;        System.out.println(&quot;Zaktualizowano wpis dla ....&quot;;&#10;        //lub&#10;            System.out.println(&quot;Aktualizacja się nie powiodła. Aktualne hasło jest nieprawidłowe. Brak możliwości zweryfikowania użytkowniaka&quot;);&#10;        }" description="Aktualizacja wpisu w bazie" toReformat="false" toShortenFQNames="true">
+    <variable name="columnName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="tableName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="columnNamesWithValues" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>
