@@ -1,7 +1,7 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Project 'Spring01xml'" />
-    <option name="defaultScopeName" value="Project 'Spring01xml'" />
-    <option name="SEARCH_SCOPE" value="Project 'Spring01xml'" />
+    <option name="customScope" value="File '...\src\main\webapp\web-inf\views\form.jsp [a_Dzien_2]'" />
+    <option name="defaultScopeName" value="File '...\src\main\webapp\web-inf\views\form.jsp [a_Dzien_2]'" />
+    <option name="SEARCH_SCOPE" value="File '...\src\main\webapp\web-inf\views\form.jsp [a_Dzien_2]'" />
   </component>
 </application>
